@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Safari</string>
+    <string name="search_placeholder">Поиск или введите сайт</string>
+    <string name="favorites_title">Избранное</string>
+    <string name="reading_list_title">Список для чтения</string>
+    <string name="see_all">Все ›</string>
+    <string name="done">Готово</string>
+    <string name="close_all">Закрыть все</string>
+    <string name="new_tab">Новая вкладка</string>
+    <string name="cannot_open">Не удалось открыть</string>
+    <string name="open_in_safari">Открыть в Safari</string>
+    <string name="tab_singular">вкладка</string>
+    <string name="tab_few">вкладки</string>
+    <string name="tab_many">вкладок</string>
+</resources>

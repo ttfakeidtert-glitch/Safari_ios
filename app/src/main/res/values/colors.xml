@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="safari_white">#FFFFFF</color>
+    <color name="safari_black">#000000</color>
+    <color name="safari_bg">#FFFFFF</color>
+    <color name="safari_bg_dark">#000000</color>
+    <color name="safari_bg_secondary">#F2F2F7</color>
+    <color name="safari_bg_secondary_dark">#1C1C1E</color>
+    <color name="safari_card">#FFFFFF</color>
+    <color name="safari_card_dark">#1C1C1E</color>
+    <color name="safari_text">#000000</color>
+    <color name="safari_text_dark">#FFFFFF</color>
+    <color name="safari_text_secondary">#8E8E93</color>
+    <color name="safari_text_tertiary">#C7C7CC</color>
+    <color name="safari_border">#E5E5EA</color>
+    <color name="safari_border_dark">#38383A</color>
+    <color name="safari_accent">#007AFF</color>
+    <color name="safari_red">#FF3B30</color>
+    <color name="safari_green">#34C759</color>
+    <color name="safari_orange">#FF9500</color>
+    <color name="safari_toolbar_light">#F9F9F9</color>
+    <color name="safari_toolbar_dark">#1C1C1E</color>
+    <color name="safari_url_bg">#E9E9EB</color>
+    <color name="safari_url_bg_dark">#2C2C2E</color>
+</resources>

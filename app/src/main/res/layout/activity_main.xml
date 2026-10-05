@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ВЕРХНЯЯ ПАНЕЛЬ: адресная строка -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F9F9F9"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <!-- Локон -->
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@android:drawable/ic_lock_lock"
+                android:tint="#34C759"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="6dp"/>
+
+            <!-- Адресная строка -->
+            <EditText
+                android:id="@+id/urlInput"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Поиск или введите сайт"
+                android:textColorHint="#8E8E93"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:inputType="textUri"
+                android:imeOptions="actionGo"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"/>
+
+            <!-- Кнопка обновить -->
+            <ImageButton
+                android:id="@+id/btnReload"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:tint="#007AFF"
+                android:contentDescription="Обновить"/>
+
+        </LinearLayout>
+
+        <!-- Прогресс-бар -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progressTint="#007AFF"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- КОНТЕЙНЕР ДЛЯ WEBVIEW -->
+    <FrameLayout
+        android:id="@+id/webContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="56dp"/>
+
+    <!-- ПАНЕЛЬ ВКЛАДОК (скрыта по умолчанию) -->
+    <LinearLayout
+        android:id="@+id/tabsPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F2F2F7"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tabsCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 вкладка"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/tabsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="#F9F9F9">
+
+            <TextView
+                android:id="@+id/closeAllText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Закрыть все (1)"
+                android:textColor="#FF3B30"
+                android:textSize="16sp"
+                android:padding="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- НИЖНЯЯ ПАНЕЛЬ: навигация -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="#F9F9F9"
+        android:elevation="4dp"
+        android:gravity="center_vertical">
+
+        <!-- Назад -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_previous"
+            android:tint="#007AFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Назад"/>
+
+        <!-- Вперёд -->
+        <ImageButton
+            android:id="@+id/btnForward"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_next"
+            android:tint="#007AFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Вперёд"/>
+
+        <!-- Поделиться -->
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_share"
+            android:tint="#007AFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Поделиться"/>
+
+        <!-- Закладки -->
+        <ImageButton
+            android:id="@+id/btnBookmarks"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:tint="#007AFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Закладки"/>
+
+        <!-- Вкладки -->
+        <ImageButton
+            android:id="@+id/btnTabs"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_crop"
+            android:tint="#007AFF"
+            android:scaleType="centerInside"
+            android:contentDescription="Вкладки"/>
+
+    </LinearLayout>
+
+</FrameLayout>
