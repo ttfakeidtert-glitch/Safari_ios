@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetJavaScriptEnabled")
     private void setupWebSettings() {
         CookieManager.getInstance().setAcceptCookie(true);
-        CookieManager.getInstance().setAcceptThirdPartyCookies(null, true);
     }
 
     private void setupListeners() {
